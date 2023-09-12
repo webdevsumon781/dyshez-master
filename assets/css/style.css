@@ -201,18 +201,59 @@ a {
     font-size: 15px;
   }
 }
-
-@media (max-width: 1024px) {
+@media (min-width: 881px) and (max-width: 1024px) {
   .bg {
-    background-size: 890px;
+    background-size: 690px;
   }
 
   .home {
-    height: fit-content;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .content {
+    flex-direction: row;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .details {
+    width: 60%;
+  }
+
+  .details h1,
+  p {
+    width: 92%;
+  }
+
+  .homeimage {
+    display: block;
+    width: 50%;
+    height: 620px;
+    padding-top: 50px;
+  }
+
+  .appimage {
+    display: none;
+    
+  }
+}
+@media (min-width: 768px) and (max-width: 880px) {
+  .bg {
+    background-size: 750px;
+  }
+
+  .home {
+    height: 100vh;
+    overflow: hidden;
   }
 
   .content {
     flex-direction: column;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
   }
 
   .details {
@@ -221,7 +262,7 @@ a {
 
   .details h1,
   p {
-    width: 80%;
+    width: 92%;
   }
 
   .homeimage {
@@ -230,24 +271,37 @@ a {
 
   .appimage {
     display: block;
-    width: 578px;
+    width: 90%;
     height: 620px;
     padding-top: 50px;
   }
 }
 
-@media (max-width: 767px) {
-    .bg {
-        background-size: 590px;
-      }
+@media only screen and (max-width: 767px) {
+  .bg {
+    background-size: 590px;
+  }
   .home {
     background-size: 145% 65%;
-    height: fit-content;
+    height: 100vh;
     overflow: hidden;
+    padding: 25px;
+  }
+  .content {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .details {
+    width: 100%;
   }
   .details h1,
   p {
     width: 100%;
+  }
+  .homeimage{
+    display: none;
   }
 
   .appimage {
@@ -255,6 +309,7 @@ a {
     width: 493px;
     height: 527px;
     margin-left: 170px;
+    display: block;
   }
 
   .details {
@@ -288,12 +343,15 @@ a {
     font-size: 14px;
   }
 
+  .image-left img{
+    width: 85%;
+  }
   .image-right {
     display: none;
   }
 }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
   .home {
     height: 100vh;
     background-size: 180% 52%;
@@ -303,4 +361,4 @@ a {
   .image-left img {
     width: 120px;
   }
-}
+} */
